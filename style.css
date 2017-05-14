@@ -1,0 +1,29 @@
+@font-face {
+    font-family: pongCloneFont;
+    src: url(atariFull.ttf);
+}
+
+body {
+	background-color: #FCEC66;
+}
+
+canvas {
+	margin-left: 25vw; 
+	margin-top: 5vh;
+}
+
+h1 {
+	margin: 0% 40%;
+	padding-top: 2%;
+	white-space: nowrap;
+	font-family: pongCloneFont;
+	text-transform: uppercase;
+}
+
+.dash{
+  border: 0 none;
+  border-top: 2px dashed white;
+  background: none;
+  height:0;
+} 
+
