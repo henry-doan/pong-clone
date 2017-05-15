@@ -18,7 +18,7 @@ aiSpeed = 2;
 
 window.onload = function() {
 	canvas = document.getElementById('gameConsole');
-	cc = canvas.getContext('2d');
+	canvasContent = canvas.getContext('2d');
 	setInterval(update, 1000 / 30);
 	canvas.addEventListener('mousemove', function(e) {
 		paddle1y = e.clientY - paddleHeight / 2;
@@ -76,30 +76,30 @@ function update() {
 		paddle2y -= aiSpeed;
 	}
 
-	cc.fillStyle = 'black';
+	canvasContent.fillStyle = 'black';
 	// screen size
-	cc.fillRect(0, 0, canvas.width, canvas.height);
+	canvasContent.fillRect(0, 0, canvas.width, canvas.height);
 
-	cc.fillStyle = 'white';
+	canvasContent.fillStyle = 'white';
 
 	// Net
 	for(var i = 0; i < canvas.height; i += 40) {
-		cc.fillRect(canvas.width/2-1, i, 6, 20);
+		canvasContent.fillRect(canvas.width/2-1, i, 6, 20);
 	}
 
 	// Paddles
-	cc.fillRect(0, paddle1y, paddleThickness, paddleHeight);
-	cc.fillRect(canvas.width - paddleThickness, paddle2y, paddleThickness , paddleHeight);
+	canvasContent.fillRect(0, paddle1y, paddleThickness, paddleHeight);
+	canvasContent.fillRect(canvas.width - paddleThickness, paddle2y, paddleThickness , paddleHeight);
 
 	// Draws Ball
-	cc.fillStyle = 'white';
-	cc.beginPath();
-	cc.arc(ballX, ballY, 10, 0,Math.PI*2,true);
-	cc.fill();
+	canvasContent.fillStyle = 'white';
+	canvasContent.beginPath();
+	canvasContent.arc(ballX, ballY, 10, 0,Math.PI*2,true);
+	canvasContent.fill();
 
 	// Draws Scores
-	cc.fillText(score1, 100, 100);
-	cc.fillText(score2, canvas.width - 100, 100);
+	canvasContent.fillText(score1, 100, 100);
+	canvasContent.fillText(score2, canvas.width - 100, 100);
 
 }
 
