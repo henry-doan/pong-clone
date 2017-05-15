@@ -80,20 +80,22 @@ function update() {
 	// screen size
 	cc.fillRect(0, 0, canvas.width, canvas.height);
 
+
 	// Paddles
 	cc.fillStyle = 'white';
 
 	cc.fillRect(0, paddle1y, paddleThickness, paddleHeight);
 	cc.fillRect(canvas.width - paddleThickness, paddle2y, paddleThickness , paddleHeight);
 
-
-
 	// Draws Ball
-	cc.fillRect(ballX - ballDimension/2, ballY - ballDimension/2,ballDimension, ballDimension );
-
+	cc.fillStyle = 'white';
+	cc.beginPath();
+	cc.arc(ballX, ballY, 10, 0,Math.PI*2,true);
+	cc.fill();
 
 	// Draws Scores
 	cc.fillText(score1, 100, 100);
 	cc.fillText(score2, canvas.width - 100, 100);
 
 }
+
