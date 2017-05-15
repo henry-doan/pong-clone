@@ -38,14 +38,11 @@ window.onload = function() {
 }
 
 function reset() {
-	if(score1 >= winScore ||
-		score2 >= winScore) {
-
+	if(score1 >= winScore || score2 >= winScore) {
 		showingWinScreen = true;
 	}
 
 	if(score1 % 3 == 0 ) {
-
 		xVelocity += 2;
 	}
 
@@ -100,6 +97,7 @@ function update() {
 	}
 
 	canvasContent.fillStyle = 'black';
+
 	// screen size
 	canvasContent.fillRect(0, 0, canvas.width, canvas.height);
 
@@ -130,7 +128,7 @@ function update() {
 	// Draws Ball
 	canvasContent.fillStyle = 'white';
 	canvasContent.beginPath();
-	canvasContent.arc(ballX, ballY, 10, 0,Math.PI*2,true);
+	canvasContent.arc(ballX, ballY, 10, 0, Math.PI*2, true);
 	canvasContent.fill();
 
 	// Draws Scores
