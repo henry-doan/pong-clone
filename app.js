@@ -80,10 +80,14 @@ function update() {
 	// screen size
 	cc.fillRect(0, 0, canvas.width, canvas.height);
 
-
-	// Paddles
 	cc.fillStyle = 'white';
 
+	// Net
+	for(var i = 0; i < canvas.height; i += 40) {
+		cc.fillRect(canvas.width/2-1, i, 6, 20);
+	}
+
+	// Paddles
 	cc.fillRect(0, paddle1y, paddleThickness, paddleHeight);
 	cc.fillRect(canvas.width - paddleThickness, paddle2y, paddleThickness , paddleHeight);
 
