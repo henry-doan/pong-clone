@@ -13,17 +13,34 @@ canvas {
 }
 
 h1 {
-	margin: 0% 40%;
-	padding-top: 2%;
+	margin: 1% 40%;
+	padding-top: 0;
 	white-space: nowrap;
 	font-family: pongCloneFont;
 	text-transform: uppercase;
 }
 
-.dash{
-  border: 0 none;
-  border-top: 2px dashed white;
-  background: none;
-  height:0;
-} 
+.watermark {
+ position: fixed;
+ bottom: 5px;
+ right: 45px;
+ opacity: 0.5;
+ z-index: 99;
+ color: grey;
+ font-size: 25px;
+ font-family: "Lucida Sans Unicode";
+}
 
+.watermark a:link {
+  color: grey;
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  color: grey;
+}
+
+a:hover {
+  text-decoration: underline !important;
+}
